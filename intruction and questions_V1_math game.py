@@ -26,40 +26,6 @@ while True:
         print("who are are you?")
         continue
 
-# time to loading payer's name
-import time
-
-while True:
-    for dots in range(4):
-        print("\rGame loading" + "." * dots, end="", flush=True)
-        time.sleep(0.5)
-    break
-print("")
-print("loading player's name done")
-
-# Ask the player if they want the AI ​​assistant to help.
-while True:
-    answer = input("Do you want Ai to answer if you don't know? ").lower()
-
-    if answer == "no":
-        print("Alright, i hope you can understand it")
-        break
-
-    elif answer == "yes":
-        print("Okay, I will give smart AI if you don't know or answer worng")
-        Ai_name = input("Enter your Ai name:").lower()
-        import time
-        while True:
-            for dots in range(4):
-               print("\r creating Ai" + "🔨" * dots, end="", flush=True)
-               time.sleep(0.5)
-            break
-        break
-
-print("")
-# click to continue to instruction 
-input("click to got next")
-
 # ask player want instruction yes or no to continue
 while True:
     answer = input("Do you want to see the instruction: ").lower()
@@ -78,7 +44,7 @@ while True:
         break
 
     else:
-        print("Please type 'yes' or 'no'.")
+        print("Please type yes or no.")
         continue
 
 # ASK USER THEY WANT

@@ -24,23 +24,6 @@ while True:
         print("who are are you?")
         continue
 
-# Ask the player if they want the AI ​​assistant to help.
-
-print("before we start we also want ask if you need some help")
-while True:
-    answer = input("Do you want Ai to answer if you don't know? ").lower()
-
-    if answer == "no" or "n":
-        print("Alright, i hope you can understand it")
-        break
-
-    elif answer == "yes" or "y":
-        print("Okay, I will give smart AI if you don't know or answer worng")
-        Ai_name = input("Enter your Ai name:").lower()
-        break
-    else:
-        print("yes or no")
-
 # click to continue to instruction 
 input("click to got next")
 
@@ -56,25 +39,25 @@ while True:
         print("Step 2: tpye your answer")
         print("final step: check and get answer")
         break
-    
-    elif answer == "no" or "n":
-         mathask = input("Are you sure about that?").lower()
 
-         if mathask == "no" or "n":
-          print("Okay, I will instruction for you.")
+    elif answer == "no" or "n":
+         answer = input("Are you sure about that?").lower()
+
+    if answer == "no":
+        print("Okay, I will instruction for you.")
         
         # instruction for new player
-          print("Step 1: use your brain")
-          print("Step 2: tpye your answer")
-          print("final step: check and get answer")
-          break
+        print("Step 1: use your brain")
+        print("Step 2: tpye your answer")
+        print("final step: check and get answer")
+        break
 
-         elif mathask =="yes" or "y":
-            print("ok, good luck")
-            break
+    elif answer =="yes" or "y":
+        print("ok, good luck")
+        break
+
     else:
         print("Please tpye yes or no ")
-        continue
 
 input ("click to continue")
 
@@ -88,107 +71,196 @@ input("now we can start the game (click)")
 
 # math quest
 
+
 # history answer of player
 score = 0
 
 while True:
    # Question 1
    answer = input("question 1) What is 1 + 1? ")
-   if answer == "3":
+   if answer == "3" or "three":
       print("Correct!")
       score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
    else:
       print("OH noooooo, it's 3 hehe")
+      break
 
-   input("click to keep going")
+while True:
    # Question 2
+   input("click to keep going")
    answer = input("question 2) What is 23 + 10? ")
    if answer == "33":
       print("Correct!")
       score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
    else:
       print("Wrong!")
+      break
 
-   input("click to keep going")
+while True:
    # Question 3
+   input("click to keep going")
    answer = input("question 3) What is 5 × 3? ")
    if answer == "15":
       print("Correct!")
       score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
    else:
       print("Wrong!")
+      break
 
+while True:
    input("click to keep going")
    # Question 4
    answer = input("question 4) What is 7 × 7? ")
    if answer == "49":
       print("Correct!")
       score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
    else:
       print("Wrong!")
+      break
 
+while True:
    input("click to keep going")
    # Question 5
    answer = input("question 5) What is 8 × 3? ")
    if answer == "24":
       print("Correct!")
       score += 1
-   else:
-      print("Wrong!")
-
-   make_statement (player_name,"keep going","*")
-
-   input("click to keep going")
-   # Question 6
-   answer = input("question 6) What is 9 × 9? ")
-   if answer == "81":
-      print("Correct!")
-      score += 1
-   else:
-      print("Wrong!")
-
-   input("click to keep going")
-   # Question 7
-   answer = input("question 7) What is (2+5) × 4? ")
-   if answer == "28":
-      print("Correct!")
-      score += 1
-   else:
-      print("oh that's easy, keep try again")
-
-   input("click to keep going")
-   # Question 8
-   answer = input("question 8) What is 10 × 7? ")
-   if answer == "70":
-      print("Correct!")
-      score += 1
-   else:
-      print("Wrong!waaaaaahaha")
-
-   input("click to keep going")
-   # Question 9
-   answer = input("question 9) What is 4 × 9? ")
-   if answer == "36":
-      print("Correct!")
-      score += 1
-   else:
-      print("Wrong!")
-
-   input("not bad, last question click to final question")
-   # Question 10
-   answer = input("question 10) What is 8 × 6? ")
-   if answer == "48":
-      print("Correct!")
-      score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
    else:
       print("Wrong!")
       break
 
-   
+if score >= 5:
+   print("Amazing! You’re god waaaa 🌟")
+elif score >= 3:
+   print("not bat haha” Keep practicing! 👍")
+else:
+   print("you answer worng too much!! keep trying ")
+
+
+
+while True:
+   # Question 6
+   input("click to keep going")
+   answer = input("question 6) What is 9 × 9? ")
+   if answer == "81":
+      print("Correct!")
+      score += 1
+      break
+   elif answer == "":
+      print("stop keep do not answer")
+      break
+   else:
+      print("Wrong!!!!")
+      break
+
+while True:
+   # Question 7
+   input("click to keep going")
+   answer = input("question 7) What is (2+5) × 4? ")
+   if answer == "28":
+      print("Correct!")
+      score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
+   else:
+      print("oh that's easy, keep try again")
+      break
+
+while True:
+   # Question 8
+   input("click to keep going")
+   answer = input("question 8) What is 10 × 7? ")
+   if answer == "70":
+      print("Correct!")
+      score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
+   else:
+      print("Wrong!waaaaaahaha")
+      break
+
+while True:
+   # Question 9
+   input("click to keep going")
+   answer = input("question 9) What is 4 × 9? ")
+   if answer == "36":
+      print("Correct!")
+      score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
+   else:
+      print("Wrong!")
+      break
+
+while True:
+   # Question 10
+   input("not bad, last question click to final question")
+   answer = input("question 10) What is 8 × 6? ")
+   if answer == "48":
+      print("Correct!")
+      score += 1
+      break
+   elif answer == "":
+      print("you didn't answer")
+      break
+   else:
+      print("Wrong!")
+      break
+
+
 # Output the result
-make_statement (" well done"," 🤓")
-print("total your score is:", score, "/ 10")
+make_statement("Round Results","📢")
 
 
-if answer=="":
-    print("please wite smhing")
+
+if score >= 8:
+   print("OMG, YOU DROPPED THIS 👑" 
+   "      " 
+   "       YOU WON THIS GAME")
+elif score >= 6:
+   make_statement (player_name," you did very well"," 🤓")
+else:
+   print("this is the end...")
+
+
+
+
+
+# aksing about want to see the score(history)
+question = "do you want to see your score?"
+correct_answer = "yes"
+
+while attempts < max_attempts:
+   player_input = input(question + " ")
+   if player_input == correct_answer:
+     print("total your score is:", score, "/ 10")
+   break
+else:
+ print(f"Wrong! You have {max_attempts - attempts} tries left.")
+
