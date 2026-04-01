@@ -29,56 +29,62 @@ input("click to got next")
 
 # ask player want instruction yes or no to continue
 while True:
-    answer = input("Do you want to see the instruction: ").lower()
+   answer = input("Do you want to see the instruction? ").lower()
+   if answer == "yes":
+       print("Okay, I will instruction for you.")
+      # instruction for new player
+       print("")
+       print("           Step 1:  based on the available numbers")
+       print("")
+       print("           Step 2: Calculate it  and tpye your answer")
+       print("")
+       print("           final step: check and give the correct answer")
+       print("")
+       print("             you will get point(socre) if aswer correct ")
+       break
+   elif answer == "no":
+      answer = input(" Are you sure about that?")
 
-    if answer == "yes" or "y":
-        print("Okay, I will instruction for you.")
-        
-        # instruction for new player
-        print("Step 1: use your brain")
-        print("Step 2: tpye your answer")
-        print("final step: check and get answer")
-        break
+      if answer == "no":
+         print("")
+         print("i knew it, let see the instrucion!")
+         print("")
+         input("              click to see intrustion!!")
+         print("")
+         print("Step 1: based on the available numbers")
+         print("")
+         print("Step 2:Calculate it  and tpye your answer")
+         print("")
+         print("final step: check and give the correct answer")
+         print("")
+         break
 
-    elif answer == "no" or "n":
-         answer = input("Are you sure about that?").lower()
+      elif answer == "yes":
+         print ("okay, i think you're good at math game...")
+         break
 
-    if answer == "no":
-        print("Okay, I will instruction for you.")
-        
-        # instruction for new player
-        print("Step 1: use your brain")
-        print("Step 2: tpye your answer")
-        print("final step: check and get answer")
-        break
-
-    elif answer =="yes" or "y":
-        print("ok, good luck")
-        break
-
-    else:
-        print("Please tpye yes or no ")
-
-input ("click to continue")
+   else:
+      print("can you please tpye yes or no")
+      continue
 
 
 # get start the game
 print("")
-make_statement (" welcome to math game"," ✍️")
-print(player_name, "is ready to play!")
+make_statement ("     WELCOME TO MATH GAME"," ✍️")
+print(player_name, "ready to play!")
 input("now we can start the game (click)")
-
+print("")
 
 # math quest
 
 
-# history answer of player
+# adds score if players answer correct 
 score = 0
 
 while True:
    # Question 1
    answer = input("question 1) What is 1 + 1? ")
-   if answer == "3" or "three":
+   if answer == "3":
       print("Correct!")
       score += 1
       break
@@ -88,7 +94,7 @@ while True:
    else:
       print("OH noooooo, it's 3 hehe")
       break
-
+print("")
 while True:
    # Question 2
    input("click to keep going")
@@ -103,7 +109,7 @@ while True:
    else:
       print("Wrong!")
       break
-
+print("")
 while True:
    # Question 3
    input("click to keep going")
@@ -119,6 +125,11 @@ while True:
       print("Wrong!")
       break
 
+if score >= 2: 
+                 make_statement ("Are you a robot?"," 🤖")
+elif score <= 0:
+                 make_statement ("stop keep not answer my question!!!","🚨")
+print("")
 while True:
    input("click to keep going")
    # Question 4
@@ -133,7 +144,7 @@ while True:
    else:
       print("Wrong!")
       break
-
+print("")
 while True:
    input("click to keep going")
    # Question 5
@@ -150,14 +161,14 @@ while True:
       break
 
 if score >= 5:
-   print("Amazing! You’re god waaaa 🌟")
+   print("                 Amazing! You’re god waaaa 🌟")
 elif score >= 3:
-   print("not bat haha” Keep practicing! 👍")
+   print("               not bab haha” Keep practicing! 👍")
 else:
-   print("you answer worng too much!! keep trying ")
+   print("            you answer worng too much!! keep trying ")
 
 
-
+print("")
 while True:
    # Question 6
    input("click to keep going")
@@ -173,6 +184,10 @@ while True:
       print("Wrong!!!!")
       break
 
+if score <= 0:
+                 make_statement ("HEYYYYY STOP!!!","🚨")
+
+print("")
 while True:
    # Question 7
    input("click to keep going")
@@ -188,6 +203,9 @@ while True:
       print("oh that's easy, keep try again")
       break
 
+
+
+print("")
 while True:
    # Question 8
    input("click to keep going")
@@ -197,12 +215,16 @@ while True:
       score += 1
       break
    elif answer == "":
-      print("you didn't answer")
+      print("         you didn't answer")
       break
    else:
-      print("Wrong!waaaaaahaha")
+      print("         Wrong!waaaaaahaha")
       break
 
+if score <= 0:
+                 make_statement ("NAH MAN THIS IS MY GAME!!!","🚨")
+
+print("")
 while True:
    # Question 9
    input("click to keep going")
@@ -218,6 +240,10 @@ while True:
       print("Wrong!")
       break
 
+if score <= 1:
+   print("what worng with you?" )
+
+make_statement ("         FINALLY, you got this","🏆")
 while True:
    # Question 10
    input("not bad, last question click to final question")
@@ -235,6 +261,7 @@ while True:
 
 
 # Output the result
+print("")
 make_statement("Round Results","📢")
 
 
@@ -248,19 +275,21 @@ elif score >= 6:
 else:
    print("this is the end...")
 
-
-
-
-
 # aksing about want to see the score(history)
-question = "do you want to see your score?"
-correct_answer = "yes"
-
-while attempts < max_attempts:
-   player_input = input(question + " ")
-   if player_input == correct_answer:
-     print("total your score is:", score, "/ 10")
-   break
+input("click to keep continue")
+answer = input("do you want to see the history's score?")
+if answer == "yes":
+   print("total your score is:", score, "/ 10")
+elif answer == "no":
+   print("the game is over")
 else:
- print(f"Wrong! You have {max_attempts - attempts} tries left.")
-
+   make_statement("it's ok","😓")
+   
+input("                           thank for your play")
+print("")
+if score <= 0:
+                    make_statement (player_name,"I HATE YOu","🚨")
+print("")
+input("                          the game made by Minh Do")
+input("                               have good day")
+print("                                 thank you  ")
