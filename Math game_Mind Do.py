@@ -25,7 +25,7 @@ while True:
         continue
 
 # click to continue to instruction 
-input("click to got next")
+input("click to go next")
 
 # ask player want instruction yes or no to continue
 while True:
@@ -41,6 +41,8 @@ while True:
        print("           final step: check and give the correct answer")
        print("")
        print("             you will get point(socre) if aswer correct ")
+       print("")
+       input("    if you done reading instruction, click to start the game ")
        break
    elif answer == "no":
       answer = input(" Are you sure about that?")
@@ -57,6 +59,8 @@ while True:
          print("")
          print("final step: check and give the correct answer")
          print("")
+         print("")
+         input("    if you done reading instruction, click to start the game ")
          break
 
       elif answer == "yes":
@@ -66,7 +70,6 @@ while True:
    else:
       print("can you please tpye yes or no")
       continue
-
 
 # get start the game
 print("")
@@ -154,11 +157,29 @@ while True:
       score += 1
       break
    elif answer == "":
-      print("you didn't answer")
-      break
-   else:
-      print("Wrong!")
-      break
+       answer = input(" Do you want to answer again?").lower()
+       
+       if answer == "yes":
+           print ("ok, let try again")
+           print("")
+           answer = input("question 5) What is 8 × 3? ")
+           if answer == "24":
+              print("Correct!!")
+              score += 1
+              break
+           elif answer == "":
+               print("you didn't answer, it's to hard for you?")
+               break
+           else:
+               print("HOW, you still worng but that's so easy")
+               break
+       elif answer == "no":
+           print("ok, we still not done yet!")
+           break
+       else:
+           print("you didn't answer, please keep your cool head.")
+           break
+
 
 if score >= 5:
    print("                 Amazing! You’re god waaaa 🌟")
@@ -184,7 +205,7 @@ while True:
       print("Wrong!!!!")
       break
 
-if score <= 0:
+if score <= 1:
                  make_statement ("HEYYYYY STOP!!!","🚨")
 
 print("")
@@ -203,7 +224,8 @@ while True:
       print("oh that's easy, keep try again")
       break
 
-
+if score <= 1:
+                 make_statement ("we will report you if you still keep doing that!!!","🚨")
 
 print("")
 while True:
@@ -221,7 +243,7 @@ while True:
       print("         Wrong!waaaaaahaha")
       break
 
-if score <= 0:
+if score <= 1:
                  make_statement ("NAH MAN THIS IS MY GAME!!!","🚨")
 
 print("")
@@ -243,7 +265,7 @@ while True:
 if score <= 1:
    print("what worng with you?" )
 
-make_statement ("         FINALLY, you got this","🏆")
+make_statement ("         FINALLY, you got this","*")
 while True:
    # Question 10
    input("not bad, last question click to final question")
@@ -293,3 +315,5 @@ print("")
 input("                          the game made by Minh Do")
 input("                               have good day")
 print("                                 thank you  ")
+
+
