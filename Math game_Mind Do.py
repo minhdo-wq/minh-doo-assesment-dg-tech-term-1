@@ -309,10 +309,12 @@ else:
    
 input("                           thank for your play")
 print("")
-if score <= 0:
-                    make_statement (player_name,"I HATE YOu","🚨")
+if score <= 3:
+                    make_statement (player_name,"you not good at math","🚨")
+elif score >= 7:
+                   make_statement ("you did very well")
 print("")
-input("                          the game made by Minh Do")
+input("                          the game made by Minh Do(click to go next)")
 input("                               have good day")
 print("                                 thank you  ")
 
