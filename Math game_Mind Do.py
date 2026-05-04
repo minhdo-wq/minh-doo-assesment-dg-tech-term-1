@@ -2,131 +2,188 @@ def make_statement(statement, decoration):
         """Adds emoji / additional characters to the start and end of headings"""
         ends = decoration * 3
         print(f"{ends} {statement} {ends}")
+import random
 
 # Main routine
 make_statement (" hello"," 🤓")
 
-input("my name is Coconut ")
+input("my name is Coconut (enter to continue)")
 
 input("welcome to math game")
 
-# tpye player's name
+# type player's name
 while True:
-    player_name = input("Enter your name: ").lower()
+    player_name = input("                     Enter your name: ").lower()
     if player_name == player_name:
-        print(player_name,"uhm nice")
+        print(player_name,                          "uhm nice")
         break
 
-    elif player_name == "idk":
-        continue
-
-    else:
-        print("who are are you?")
-        continue
-
-# click to continue to instruction 
-input("click to go next")
+input("     enter to go next")
 
 # ask player want instruction yes or no to continue
+instrution = 1
 while True:
    answer = input("Do you want to see the instruction? ").lower()
-   if answer == "yes":
+   if answer == "yes" or answer == "y":
        print("Okay, I will instruction for you.")
       # instruction for new player
        print("")
        print("           Step 1:  based on the available numbers")
        print("")
-       print("           Step 2: Calculate it  and tpye your answer")
+       print("           Step 2: Calculate it  and type your answer")
        print("")
        print("           final step: check and give the correct answer")
        print("")
        print("             you will get point(socre) if aswer correct ")
        print("")
-       input("    if you done reading instruction, click to start the game ")
+       input("    if you done reading instruction to start the game ")
        break
-   elif answer == "no":
+   elif answer == "no" or answer == "n":
       answer = input(" Are you sure about that?")
 
-      if answer == "no":
+      if answer == "no" or answer == "n":
          print("")
          print("i knew it, let see the instrucion!")
          print("")
-         input("              click to see intrustion!!")
+         input("               to see intrustion!!")
          print("")
          print("Step 1: based on the available numbers")
          print("")
-         print("Step 2:Calculate it  and tpye your answer")
+         print("Step 2:Calculate it  and type your answer")
          print("")
          print("final step: check and give the correct answer")
          print("")
          print("")
-         input("    if you done reading instruction, click to start the game ")
+         input("    if you done reading instruction  to start the game ")
          break
 
-      elif answer == "yes":
+      elif answer == "yes" or answer == "y":
          print ("okay, i think you're good at math game...")
          break
-
    else:
-      print("can you please tpye yes or no")
-      continue
+        if instrution <= 1:
+             print("")
+             print("please type yes or no!")
+             print(" ")
+             instrution += 1
+             continue
+        elif instrution <= 2:
+             print("")
+             print("stop keep type nothing, please type yes or no dude!!!")
+             print("")
+             instrution += 1
+             continue
+        elif instrution <= 3:
+             print("")
+             print("we will skip the instrution if you don't say anything")
+             print("please just tpye yes or no!!")
+             print("")
+             instrution += 1
+             continue
+        elif instrution <=4:
+             print("")
+             print("           you didn't say anything so we was skip your instrution")
+             print("                               good luck")
+             break
+
 
 # get start the game
 print("")
-make_statement ("     WELCOME TO MATH GAME"," ✍️")
-print(player_name, "ready to play!")
-input("now we can start the game (click)")
+make_statement (                                "WELCOME TO MATH GAME"," ✍️")
+print(                                     player_name, "ready to play!")
+print("")
+input("                                        now we can start the game")
 print("")
 
-# math quest
-
-
 # adds score if players answer correct 
+quest1 = 0
+quest2 = 0
+three = 0
+four = 0
+five = 0
+six = 0
+seven = 0
+eight = 0
+nine =0
+ten = 0
 score = 0
+again = 1
 
+# numbers of questions
+a = random.randint(1, 10)
+b = random.randint(1, 10)
+c = random.randint(1, 10)
+d = random.randint(1, 10)
+e = random.randint(1, 10)
+f = random.randint(1, 10)
+h= random.randint(1, 10)
+k = random.randint(1, 10)
+t = random.randint(1, 10)
+r = random.randint(1, 10)
+p = random.randint(1, 10)
+g = random.randint(1, 10)
+correct_answer = a + b
+hehe = t + f
+Qnice = g + e
+print("")
+input ("              before we start, we just have 10 question and use type number not word")
+print("                                     enter if you read it")
+print("")
 while True:
    # Question 1
-   answer = input("question 1) What is 1 + 1? ")
-   if answer == "3":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("you didn't answer")
-      break
+   print("question 1")
+   answer = input(f"What is {a} + {b}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == correct_answer:
+        print("Correct!")
+        quest1 += 1
+        score += 1
+        break
    else:
-      print("OH noooooo, it's 3 hehe")
-      break
+        print(f"OH nooooo, it's {correct_answer} hehe")
+        break
+   
 print("")
 while True:
    # Question 2
-   input("click to keep going")
-   answer = input("question 2) What is 23 + 10? ")
-   if answer == "33":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("you didn't answer")
-      break
+   input(" enter to keep going")
+   print("question 2")
+   answer = input(f"What is {t} + {f}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == hehe:
+        print("Correct!")
+        quest2 += 1
+        score += 1
+        break
    else:
-      print("Wrong!")
-      break
+        print(f"sorry but you wasn worng , it's {hehe}")
+        break
+   
 print("")
+quest3 = k + a
 while True:
    # Question 3
-   input("click to keep going")
-   answer = input("question 3) What is 5 × 3? ")
-   if answer == "15":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("you didn't answer")
-      break
+   print("question 3")
+   input(" to keep going")
+   answer = input(f"What is {k} + {a}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == quest3:
+        print("Correct!")
+        three += 1
+        score += 1
+        break
    else:
-      print("Wrong!")
-      break
+        print(f"it's {quest3}, not that ")
+        break
 
 if score >= 2: 
                  make_statement ("Are you a robot?"," 🤖")
@@ -134,50 +191,58 @@ elif score <= 0:
                  make_statement ("stop keep not answer my question!!!","🚨")
 print("")
 while True:
-   input("click to keep going")
+   input("enter to keep going")
    # Question 4
-   answer = input("question 4) What is 7 × 7? ")
-   if answer == "49":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("you didn't answer")
-      break
+   heel = k + h 
+   print("question 4")
+   answer = input(f"What is {k} + {h}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == heel:
+        print("Correct!")
+        four += 1
+        score += 1
+        break
    else:
-      print("Wrong!")
-      break
+        print(f"worng , it's {heel}")
+        break
 print("")
 while True:
-   input("click to keep going")
+   input(" to keep going")
    # Question 5
-   answer = input("question 5) What is 8 × 3? ")
-   if answer == "24":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-       answer = input(" Do you want to answer again?").lower()
-       
-       if answer == "yes":
+   good = t + f
+   print("question 5")
+   answer = input(f"What is {t} + {f}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == good:
+        print("Correct!")
+        five += 1
+        score += 1
+        break
+   else:
+        answer = input(" Do you want to answer again?").lower()
+        if answer == "yes" or answer == "y":
            print ("ok, let try again")
            print("")
-           answer = input("question 5) What is 8 × 3? ")
-           if answer == "24":
-              print("Correct!!")
-              score += 1
-              break
-           elif answer == "":
-               print("you didn't answer, it's to hard for you?")
-               break
-           else:
-               print("HOW, you still worng but that's so easy")
-               break
-       elif answer == "no":
+           answer = input(f"What is {t} + {f}? ")
+           if answer == "":
+                print ("you didn't answer")
+                break
+           elif int(answer) == good:
+                print("Correct!!")
+                five += 1
+                score += 1
+                break
+        elif answer == "no" or answer == "n":
            print("ok, we still not done yet!")
            break
-       else:
-           print("you didn't answer, please keep your cool head.")
+        else:
+           print("you didn't answer, don't give up .")
            break
 
 
@@ -190,58 +255,67 @@ else:
 
 
 print("")
+quest6 = b + b
 while True:
    # Question 6
-   input("click to keep going")
-   answer = input("question 6) What is 9 × 9? ")
-   if answer == "81":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("stop keep do not answer")
-      break
+   print("question 6")
+   input(" enter to keep going")
+   answer = input(f"What is {b} + {b}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+   elif int(answer) == quest6:
+        print("Correct!")
+        six += 1
+        score += 1
+        break
    else:
-      print("Wrong!!!!")
-      break
+        print(f"worng , it's {quest6}")
+        break
 
 if score <= 1:
                  make_statement ("HEYYYYY STOP!!!","🚨")
 
 print("")
+Qseven = a + g
 while True:
    # Question 7
-   input("click to keep going")
-   answer = input("question 7) What is (2+5) × 4? ")
-   if answer == "28":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("you didn't answer")
-      break
+   input(" to keep going")
+   answer = input(f"What is {a} + {g}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == Qseven:
+        print("Correct!")
+        seven += 1
+        score += 1
+        break
    else:
-      print("oh that's easy, keep try again")
-      break
+        print(f"worng , it's {Qseven}")
+        break
 
 if score <= 1:
                  make_statement ("we will report you if you still keep doing that!!!","🚨")
 
 print("")
+Qeight = e + d
 while True:
    # Question 8
-   input("click to keep going")
-   answer = input("question 8) What is 10 × 7? ")
-   if answer == "70":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("         you didn't answer")
-      break
+   input(" to keep going")
+   answer = input(f"What is {e} + {d}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == Qeight:
+        print("Correct!")
+        eight += 1
+        score += 1
+        break
    else:
-      print("         Wrong!waaaaaahaha")
-      break
+        print(f" that's easy!!! , it's {Qeight}")
+        break
 
 if score <= 1:
                  make_statement ("NAH MAN THIS IS MY GAME!!!","🚨")
@@ -249,37 +323,43 @@ if score <= 1:
 print("")
 while True:
    # Question 9
-   input("click to keep going")
-   answer = input("question 9) What is 4 × 9? ")
-   if answer == "36":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("you didn't answer")
-      break
+   input(" to keep going")
+   answer = input(f"What is {g} + {e}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == Qnice:
+        print("Correct!")
+        nine += 1
+        score += 1
+        break
    else:
-      print("Wrong!")
-      break
+        print(f"worng , it's {Qnice}")
+        break
 
 if score <= 1:
    print("what worng with you?" )
 
 make_statement ("         FINALLY, you got this","*")
+Qten = h + c
 while True:
    # Question 10
-   input("not bad, last question click to final question")
-   answer = input("question 10) What is 8 × 6? ")
-   if answer == "48":
-      print("Correct!")
-      score += 1
-      break
-   elif answer == "":
-      print("you didn't answer")
-      break
+   input("not bad, last questio to final question")
+   answer = input(f"What is {h} + {c}? ")
+   if answer == "":
+        print("you didn't answer")
+        break
+
+   elif int(answer) == Qten:
+        print("Correct!")
+        ten += 1
+        score += 1
+        break
    else:
-      print("Wrong!")
-      break
+        print(f" that's the final question OMG , it's {Qten} !!!!")
+        break
+
 
 
 # Output the result
@@ -293,29 +373,279 @@ if score >= 8:
    "      " 
    "       YOU WON THIS GAME")
 elif score >= 6:
-   make_statement (player_name," you did very well"," 🤓")
+   make_statement (player_name," you did very well","🤓")
 else:
    print("this is the end...")
 
 # aksing about want to see the score(history)
-input("click to keep continue")
-answer = input("do you want to see the history's score?")
-if answer == "yes":
-   print("total your score is:", score, "/ 10")
-elif answer == "no":
-   print("the game is over")
-else:
-   make_statement("it's ok","😓")
-   
+
+while True:
+    answer = input("do you want to see the history's score?").lower()
+    if answer == "yes" or answer == "y":
+        print("total your score is:", score, "/ 10")
+        if quest1 >= 1:
+            print ("question 1 is Correct!")
+            print("")
+        elif quest1 <= 0:
+            print ("question 1 is worng!")
+            print("")
+        if quest2 >= 1:
+            print ("question 2 is Correct!")
+            print("")
+        elif quest2 <= 0:
+            print ("question 2 is worng!")
+            print("")
+        if three >= 1:
+            print ("question 3 is Correct!")
+            print("")
+        elif three <= 0:
+            print ("question 3 is worng!")
+            print("")
+        if four >= 1:
+            print ("question 4 is Correct!")
+            print("")
+        elif four <= 0:
+            print ("question 4 is worng!")
+            print("")
+        if five >= 1:
+            print ("question 5 is Correct!")
+            print("")
+        elif five <= 0:
+            print ("question 5 is worng!")
+            print("")
+        if six >= 1:
+            print ("question 6 is Correct!")
+            print("")
+        elif six <= 0:
+            print ("question 6 is worng!")
+            print("")
+        if seven >= 1:
+            print ("question 7 is correct!")
+            print("")
+        elif seven <= 0:
+            print("question 7 is worng")
+            print("")
+        if eight >= 1:
+            print ("question 8 is correct!")
+            print("")
+        elif eight <= 0:
+            print("question 8 is worng")
+            print("")
+        if nine >= 1:
+            print ("question 9 is correct!")
+            print("")
+        elif nine <= 0:
+            print("question 9 is worng")
+            print("")
+        if ten >= 1:
+            print ("question 10 is correct!")
+            print("")
+        elif ten <= 0:
+            print("question 10 is worng")
+            break
+    elif answer == "no" or answer == "n":
+        while True:
+            answer = input(" Are you sure about that?").lower()
+            if answer == "yes" or answer == "y":
+                print("")
+                print("")
+                while True:
+                    answer = input(" you will never know if you can check your score, are you sure about that?").lower()
+                    if answer == "yes" or answer == "y":
+                        print ("ok :)")
+                        break
+                    elif answer == "no" or answer == "n":
+                        print("")
+                        print          ("i knew it ")            
+                        print("total your score is:", score, "/ 10")
+                    if quest1 >= 1:
+                        print ("question 1 is Correct!")
+                        print("")
+                    elif quest1 <= 0:
+                        print ("question 1 is worng!")
+                        print("")
+                    if quest2 >= 1:
+                        print ("question 2 is Correct!")
+                        print("")
+                    elif quest2 <= 0:
+                        print ("question 2 is worng!")
+                        print("")
+                    if three >= 1:
+                        print ("question 3 is Correct!")
+                        print("")
+                    elif three <= 0:
+                        print ("question 3 is worng!")
+                        print("")
+                    if four >= 1:
+                        print ("question 4 is Correct!")
+                        print("")
+                    elif four <= 0:
+                        print ("question 4 is worng!")
+                        print("")
+                    if five >= 1:
+                        print ("question 5 is Correct!")
+                        print("")
+                    elif five <= 0:
+                        print ("question 5 is worng!")
+                        print("")
+                    if six >= 1:
+                        print ("question 6 is Correct!")
+                        print("")
+                    elif six <= 0:
+                        print ("question 6 is worng!")
+                        print("")
+                    if seven >= 1:
+                        print ("question 7 is correct!")
+                        print("")
+                    elif seven <= 0:
+                        print("question 7 is worng")
+                    if eight >= 1:
+                        print ("question 8 is correct!")
+                        print("")
+                    elif eight <= 0:
+                        print("question 8 is worng")
+                    if nine >= 1:
+                        print ("question 9 is correct!")
+                        print("")
+                    elif nine <= 0:
+                        print("question 9 is worng")
+                    if ten >= 1:
+                        print ("question 10 is correct!")
+                        print("")
+                    elif ten <= 0:
+                        print("question 10 is worng")
+                        break
+                    else:
+                        print("please type yes or no")
+                        break
+            elif answer == "no" or answer == "n":
+                print("")
+                print(" here is your history score")
+                print("total your score is:", score, "/ 10")
+                if quest1 >= 1:
+                    print ("question 1 is Correct!")
+                    print("")
+                elif quest1 <= 0:
+                    print ("question 1 is worng!")
+                    print("")
+                if quest2 >= 1:
+                    print ("question 2 is Correct!")
+                    print("")
+                elif quest2 <= 0:
+                    print ("question 2 is worng!")
+                    print("")
+                if three >= 1:
+                    print ("question 3 is Correct!")
+                    print("")
+                elif three <= 0:
+                    print ("question 3 is worng!")
+                    print("")
+                if four >= 1:
+                    print ("question 4 is Correct!")
+                    print("")
+                elif four <= 0:
+                    print ("question 4 is worng!")
+                    print("")
+                if five >= 1:
+                    print ("question 5 is Correct!")
+                    print("")
+                elif five <= 0:
+                    print ("question 5 is worng!")
+                    print("")
+                if six >= 1:
+                    print ("question 6 is Correct!")
+                    print("")
+                elif six <= 0:
+                    print ("question 6 is worng!")
+                    print("")
+                if seven >= 1:
+                    print ("question 7 is correct!")
+                    print("")
+                elif seven <= 0:
+                    print("question 7 is worng")
+                    print("")
+                if eight >= 1:
+                    print ("question 8 is correct!")
+                    print("")
+                elif eight <= 0:
+                    print("question 8 is worng")
+                    print("")
+                if nine >= 1:
+                    print ("question 9 is correct!")
+                    print("")
+                elif nine <= 0:
+                    print("question 9 is worng")
+                    print("")
+                if ten >= 1:
+                    print ("question 10 is correct!")
+                    print("")
+                elif ten <= 0:
+                    print("question 10 is worng")
+                    break
+            else:
+                print("error")
+                break
+    else:
+        if again <= 1:
+            print    (" ")
+            print    ("")
+            print    ("     don't do it again!!, please type yes or no")
+            print("")
+            print("")
+            again += 1
+            continue
+        elif again <= 2:
+            print    ("")
+            print    (    "")
+            print    ("     you did it again!!, please just say yes or no!")
+            print("")
+            print("")
+            again += 1
+            continue
+        elif again <= 3:
+            print("")
+            print    ("     you will get kick out if keep do it again!!")
+            print    ("     please type yes or no")
+            print("")
+            print("")
+            again += 1
+            continue
+        elif again <= 4:
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("                                                           you kicked out the game")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("") 
+            break
+        break
 input("                           thank for your play")
 print("")
 if score <= 3:
-                    make_statement (player_name,"you not good at math","🚨")
+                    make_statement ("you not good at math","🚨")
 elif score >= 7:
-                   make_statement ("you did very well")
+                   make_statement ("you did very well","!")
 print("")
-input("                          the game made by Minh Do(click to go next)")
+input("                          the game made by Minh D")
 input("                               have good day")
 print("                                 thank you  ")
-
-
